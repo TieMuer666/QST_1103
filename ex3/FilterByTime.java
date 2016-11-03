@@ -30,6 +30,9 @@ public class FilterByTime {
 			// 切分获取IP，Time
 			String strIp = null;
 			String strTime = null;
+			String [] a = line.split(" ");
+ 			String strIp = a[0];
+ 			String strTime = a[3].substring(1, a[3].length() - 1);
 			// 对在时间区间内的数据进行输出
 			System.out.println(strIp + "\t" + strTime);
 		}
